@@ -1,0 +1,49 @@
+# ========================
+# Go & Air 関連
+# ========================
+/tmp/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Goのモジュールキャッシュ（通常は入らないが念のため）
+vendor/
+
+# ========================
+# Next.js (Frontend) 関連
+# ========================
+# node_modulesは非常に重いので絶対に除外します
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Next.jsの環境変数ファイル（APIキーなどを書くため除外）
+frontend/.env
+frontend/.env*.local
+
+# ログファイル
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+frontend/*.log
+
+# ========================
+# データベース / OS / エディタ 関連
+# ========================
+# OSが自動生成する隠しファイル
+.DS_Store
+Thumbs.db
+
+# エディタの設定ファイル（共有したい場合は除外から外す）
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

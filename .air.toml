@@ -1,0 +1,21 @@
+# 最低限の必須設定のみを記述したクリーンな設定です
+root = "."
+tmp_dir = "tmp"
+
+[build]
+# ここが最重要！ビルドするファイルをピンポイントで指定
+cmd = "go build -o ./tmp/main.exe ./backend/cmd/server/main.go"
+
+# 実行するファイル
+bin = ".\\tmp\\main.exe"
+
+# 監視するフォルダと拡張子
+include_dir = ["backend"]
+include_ext = ["go", "tpl", "tmpl", "html"]
+
+# 無視するフォルダ（誤作動防止）
+exclude_dir = ["assets", "tmp", "vendor", "frontend"]
+
+# 確実なリロードのための設定
+poll = true
+poll_interval = 500
